@@ -8,4 +8,6 @@ The documentation for the [exam package](http://mirrors.ctan.org/macros/latex/co
 
 If you have any questions, let me know.
 
-''Steven Murdoch, January 2026''
+You are welcome to use it for your own work, without restriction, and so it is distributed under the <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a> license.
+
+*-- Steven Murdoch, January 2026*
