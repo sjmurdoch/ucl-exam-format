@@ -1,0 +1,162 @@
+\documentclass[a4paper,addpoints,12pt]{exam} 
+\usepackage{times}
+\usepackage{amsmath, amssymb}
+\usepackage{graphics}
+\usepackage{xcolor}
+\usepackage{setspace}
+\doublespacing
+\usepackage{draftwatermark}
+\SetWatermarkText{With Solutions\\Do Not Print}
+\SetWatermarkScale{0.6}
+%\usepackage{url}
+%\usepackage{comment}
+%\usepackage{listings}
+
+%% An example of how to use the LaTeX exam class to be similar in style to the template developed by Jens Krinke and Nicolas Gold
+%% Last updated: 7 January 2026 (Steven Murdoch)
+
+\begin{document}
+
+%% Format mark handling
+
+\pointsdroppedatright
+\bracketedpoints
+\marksnotpoints
+\marginpointname{ \points}
+
+%% Format header and footer
+
+\extrafootheight{.3in}
+\totalformat{[Total for Question \thequestion: \totalpoints{} \points]}
+\newcommand{\continuedmessage}{%
+\ifcontinuation{[Question \ContinuedQuestion\ continues]}%
+}
+\pagestyle{headandfoot}
+\lhead{\continuedmessage}
+
+\newcommand{\continuingmessage}{%
+\ifincomplete{[Question \IncompleteQuestion\ continues \oddeven{on next page}{over page}]}{~}%
+}
+\lfoot{\small~\\COMP00XX}
+\cfoot{\small~\\ \thepage}
+\rfoot{\small\continuingmessage\\%
+\oddeven{\iflastpage{END OF PAPER}{CONTINUED}}{\iflastpage{END OF PAPER}{TURN OVER}}}
+
+%% Format solutions
+
+\renewcommand{\solutiontitle}{\noindent}
+\SolutionEmphasis{\color{magenta}}
+
+%% Use \printanswers to display answers or put this in a file
+
+%\printanswers
+\input{printanswers.tex}
+
+\ifprintanswers
+\DraftwatermarkOptions{stamp=true}
+\else
+\DraftwatermarkOptions{stamp=false}
+\fi
+
+%% Format cover page
+
+\begin{coverpages}
+{\noindent\Huge UCL Computer Science\\%
+Examination Paper}
+
+\bigskip
+
+{\noindent\Large Paper Details}
+
+\bigskip
+
+\noindent Privacy Enhancing Technologies, COMP00XX (A7U, A7P)
+
+\noindent Central Assessment Period: Main Summer, 2025/26
+
+\bigskip
+
+\noindent Suitable for Cohorts: 2025/26, 2024/25
+
+\bigskip
+
+{\noindent\Large Instructions}
+
+\bigskip
+
+\noindent Answer all THREE questions.
+
+\noindent A maximum of 70 marks is available.
+
+\noindent For full marks, correct answers should be succinct, straightforward, and clear.
+
+\bigskip
+
+\noindent Marks for each part of each question are indicated in square brackets.
+
+\noindent Calculators are NOT permitted.
+
+\end{coverpages}
+
+%% The exam questions
+
+\begin{questions}
+
+%%%% Q1
+
+\question
+I am a question and can have sub and sub-sub questions.
+
+\begin{parts}
+\part
+I am a part and can have subparts.
+
+\begin{subparts}
+\subpart[5]
+
+Questions, parts and subparts may have marks associated with them
+
+\droppoints %% Display the number of marks for this question/part/subpart
+\begin{solution}[\medskipamount]
+Solution can go here
+\end{solution}
+
+\subpart[3]
+Another subpart
+
+\droppoints
+\begin{solution}[\medskipamount]
+The solution for the subpart
+\end{solution}
+
+\end{subparts}
+
+\part[4]
+Here, the part has marks associated with it
+
+\droppoints
+\begin{solution}[\medskipamount]
+And here is the solution for the part
+\end{solution}
+
+\end{parts}
+
+\droptotalpoints %% Display the total marks for this question
+
+\newpage
+
+%%%% Q2
+
+\question[1]
+I am a question with marks and a solution but no subparts
+
+\droppoints
+\begin{solution}[\medskipamount]
+Solution to the question
+\end{solution}
+
+\droptotalpoints %% Display the total marks for this question
+
+\end{questions}
+
+\end{document}
